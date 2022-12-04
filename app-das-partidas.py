@@ -9,7 +9,7 @@ st.set_page_config(
     page_icon = '⚽',
 )
 
-selecoes = pd.read_excel('dados/DadosCopaDoMundoQatar2022.xlsx', sheet_name ='selecoes', index_col = 0)
+selecoes = pd.read_excel('DadosCopaDoMundoQatar2022.xlsx', sheet_name ='selecoes', index_col = 0)
 
 fifa = selecoes['PontosRankingFIFA']
 a, b = min(fifa), max(fifa) 
@@ -125,13 +125,9 @@ st.table(matriz.applymap(aux))
 st.markdown('---')
 st.markdown("## 🌍 Probabilidades dos Jogos da Copa") 
 
-jogoscopa = pd.read_excel('dados/outputEstimativasJogosCopa.xlsx', index_col = 0)
+jogoscopa = pd.read_excel('outputEstimativasJogosCopa.xlsx', index_col = 0)
 st.table(jogoscopa[['grupo', 'seleção1', 'seleção2', 'Vitória', 'Empate', 'Derrota']])
 
 
 st.markdown('---')
-st.markdown('Trabalho desenvolvido no Minicurso FLAI Data Science na Copa do Mundo!')
-
-#bandeira1, nome1, prob, empate, prob, nome2, bandeira2
-#matriz de probabilidades do jogo
-#placar mais provável
+st.markdown('Trabalho desenvolvido durante Minicurso FLAI Data Science na Copa do Mundo!')
