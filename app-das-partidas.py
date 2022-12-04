@@ -85,12 +85,12 @@ def Jogo(selecao1, selecao2):
 
 
 
-######## COMEÇO DO APP
+# Começo do site no streamlit
 
 
 st.markdown("# 🏆 Copa do Mundo Qatar 2022") 
 
-st.markdown("## ⚽ Probabilidades das Partidas")
+st.markdown("## Probabilidades das Partidas  ")
 st.markdown('---')
 
 listaselecoes1 = selecoes.index.tolist()  
@@ -115,7 +115,7 @@ col4.metric(selecao2, prob[2])
 col5.image(selecoes.loc[selecao2, 'LinkBandeiraGrande'])
 
 st.markdown('---')
-st.markdown("## 📊 Probabilidades dos Placares") 
+st.markdown("## Probabilidades dos Placares 📊") 
 
 def aux(x):
 	return f'{str(round(100*x,1))}%'
@@ -130,4 +130,4 @@ st.table(jogoscopa[['grupo', 'seleção1', 'seleção2', 'Vitória', 'Empate', '
 
 
 st.markdown('---')
-st.markdown('Trabalho desenvolvido durante Minicurso FLAI Data Science na Copa do Mundo!')
+st.markdown('Trabalho desenvolvido durante Minicurso FLAI Data Science na Copa')
